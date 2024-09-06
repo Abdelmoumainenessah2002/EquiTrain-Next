@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 :root {
+  --primary-color: #2270e2;
+  --secondary-color: #1652ac;
   
 }
 
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
