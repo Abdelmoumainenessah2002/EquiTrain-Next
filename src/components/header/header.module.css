@@ -132,7 +132,7 @@
         transition: all .5s ease-in;
         z-index: 100;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        background-color: #31333841;
+        background-color: #5c5c5c;
     }
 
     .navLinks {
@@ -207,7 +207,7 @@
         transition: all .5s ease-in;
         z-index: 100;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        background-color: #31333841;
+        background-color: #5c5c5c;
     }
 
     .navLinks {
