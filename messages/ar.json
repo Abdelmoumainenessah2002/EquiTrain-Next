@@ -1,0 +1,36 @@
+{
+  "footer": {
+    "brand": "إكوي ترين",
+    "social": {
+      "facebook": "فيسبوك",
+      "twitter": "تويتر",
+      "youtube": "يوتيوب"
+    },
+    "sections": {
+      "services": {
+        "title": "الخدمات",
+        "howItWorks": "كيف يعمل",
+        "webDevelopment": "تطوير الويب",
+        "workPortfolio": "العمل و المحفظة",
+        "seoBacklinks": "الروابط الخلفية SEO",
+        "smmProduction": "إنتاج SMM",
+        "collaboration": "التعاون"
+      },
+      "about": {
+        "title": "حول",
+        "mission": "مهمتنا",
+        "story": "قصتنا",
+        "team": "أعضاء الفريق",
+        "pricing": "الخطط و الأسعار",
+        "career": "الوظائف",
+        "liveChat": "الدردشة المباشرة"
+      },
+      "contact": {
+        "title": "نقبل جميع بطاقات الائتمان الرئيسية.",
+        "email": "contact@EquiTrain-team.com",
+        "address": "25 شارع بوني، عنابة",
+        "phone": "+213-795-24-13-82"
+      }
+    }
+  }
+}
