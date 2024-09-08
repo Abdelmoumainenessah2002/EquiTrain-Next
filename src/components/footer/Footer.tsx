@@ -1,10 +1,14 @@
 "use client";
+import { useTranslations } from "next-intl";
 import React from "react";
 import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import FooterImg from "../../../public/cards.webp";
 import Image from "next/image";
+import LanguageSwitcher from "../../components/LanguageSwitcher";
 
 const Footer: React.FC = () => {
+  const t = useTranslations('');
+
   return (
     <footer className="py-8">
       <div className="container mx-auto px-4">
@@ -20,6 +24,7 @@ const Footer: React.FC = () => {
                   <FaFacebook
                     className="transition-colors duration-500 hover:text-blue-600"
                     size={25}
+                    title={t("footer.social.facebook")}
                   />
                 </a>
               </li>
@@ -28,6 +33,7 @@ const Footer: React.FC = () => {
                   <FaTwitter
                     className="transition-colors duration-500 hover:text-blue-400"
                     size={25}
+                    title={t("footer.social.twitter")}
                   />
                 </a>
               </li>
@@ -36,47 +42,48 @@ const Footer: React.FC = () => {
                   <FaYoutube
                     className="transition-colors duration-500 hover:text-red-500"
                     size={25}
+                    title={t("footer.social.youtube")}
                   />
                 </a>
               </li>
             </ul>
-            
+            <LanguageSwitcher /> {/* Add the language switcher here */}
           </div>
 
           {/* Services Section */}
           <div className="w-1/2 md:w-1/2 lg:w-1/4 mb-6">
             <h6 className="text-sm md:text-lg lg:text-2xl font-semibold mb-4">
-              Services
+              {t("footer.sections.services.title")}
             </h6>
             <ul>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  How it works
+                  {t("footer.sections.services.howItWorks")}
                 </a>
               </li>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  Web Development
+                  {t("footer.sections.services.webDevelopment")}
                 </a>
               </li>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  Work & Portfolio
+                  {t("footer.sections.services.workPortfolio")}
                 </a>
               </li>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  SEO Backlinks
+                  {t("footer.sections.services.seoBacklinks")}
                 </a>
               </li>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  SMM production
+                  {t("footer.sections.services.smmProduction")}
                 </a>
               </li>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  Collaboration
+                  {t("footer.sections.services.collaboration")}
                 </a>
               </li>
             </ul>
@@ -85,37 +92,37 @@ const Footer: React.FC = () => {
           {/* About Section */}
           <div className="w-1/2 md:w-1/2 lg:w-1/4 mb-6 md:mt-1">
             <h6 className="text-sm md:text-lg lg:text-2xl font-semibold mb-4">
-              About
+              {t("footer.sections.about.title")}
             </h6>
             <ul>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  Our mission
+                  {t("footer.sections.about.mission")}
                 </a>
               </li>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  Our story
+                  {t("footer.sections.about.story")}
                 </a>
               </li>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  Team Members
+                  {t("footer.sections.about.team")}
                 </a>
               </li>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  Plan & Pricing
+                  {t("footer.sections.about.pricing")}
                 </a>
               </li>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  Career
+                  {t("footer.sections.about.career")}
                 </a>
               </li>
               <li className="mb-2 hover:text-blue-600 transition">
                 <a href="#" className="text-xs md:text-base lg:text-lg">
-                  Live Chat
+                  {t("footer.sections.about.liveChat")}
                 </a>
               </li>
             </ul>
@@ -124,16 +131,16 @@ const Footer: React.FC = () => {
           {/* Contact and Payment Section */}
           <div className="w-1/2 md:w-1/2 lg:w-1/4">
             <h6 className="text-sm md:text-lg lg:text-2xl font-semibold mb-4">
-              We accept all major credit cards.
+              {t("footer.sections.contact.title")}
             </h6>
             <p className="mb-2 text-xs md:text-base lg:text-lg">
-              hello@EquiTrain-team.com
+              {t("footer.sections.contact.email")}
             </p>
             <p className="mb-2 text-xs md:text-base lg:text-lg">
-              25 Rue Boni, Annaba
+              {t("footer.sections.contact.address")}
             </p>
             <p className="mb-2 text-xs md:text-base lg:text-lg">
-              +213-795-24-13-82
+              {t("footer.sections.contact.phone")}
             </p>
             <Image src={FooterImg} alt="Footer Image" className="mt-4" />
           </div>
