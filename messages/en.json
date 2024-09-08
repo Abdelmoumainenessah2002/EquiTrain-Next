@@ -1,0 +1,35 @@
+{
+  "footer": {
+    "social": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "youtube": "YouTube"
+    },
+    "sections": {
+      "services": {
+        "title": "Services",
+        "howItWorks": "How it works",
+        "webDevelopment": "Web Development",
+        "workPortfolio": "Work & Portfolio",
+        "seoBacklinks": "SEO Backlinks",
+        "smmProduction": "SMM production",
+        "collaboration": "Collaboration"
+      },
+      "about": {
+        "title": "About",
+        "mission": "Our mission",
+        "story": "Our story",
+        "team": "Team Members",
+        "pricing": "Plan & Pricing",
+        "career": "Career",
+        "liveChat": "Live Chat"
+      },
+      "contact": {
+        "title": "We accept all major credit cards.",
+        "email": "contact@EquiTrain-team.com",
+        "address": "25 Rue Boni, Annaba",
+        "phone": "+213-795-24-13-82"
+      }
+    }
+  }
+}
