@@ -1,6 +1,5 @@
 {
   "footer": {
-    "brand": "إكوي ترين",
     "social": {
       "facebook": "فيسبوك",
       "twitter": "تويتر",
@@ -32,5 +31,15 @@
         "phone": "+213-795-24-13-82"
       }
     }
+  },
+  "header": {
+    "nav": {
+      "posts": "المنشورات",
+      "friends": "الاصدقاء",
+      "notifications": "الإشعارات",
+      "admin": "المشرف"
+    },
+    "login": "الدخول ",
+    "register": "انشاء "
   }
 }

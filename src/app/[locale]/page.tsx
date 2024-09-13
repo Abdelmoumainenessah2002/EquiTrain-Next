@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import  Image  from 'next/image'
 import HomeImg from '../../../public/home-img.webp'
-
+import Home from "../home/page";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -19,6 +19,7 @@ export default function HomePage() {
         </p>
         <Image src={HomeImg} alt="home image" height={5600} width={1200} />
       </div>
+      <Home />
     </section>
   );
 }

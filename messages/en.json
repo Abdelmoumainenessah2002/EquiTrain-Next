@@ -31,5 +31,15 @@
         "phone": "+213-795-24-13-82"
       }
     }
+  },
+  "header": {
+    "nav": {
+      "posts": "Posts",
+      "friends": "Friends",
+      "notifications": "Notifications",
+      "admin": "Admin"
+    },
+    "login": "Login",
+    "register": "Register"
   }
 }
