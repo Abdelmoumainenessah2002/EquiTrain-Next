@@ -4,8 +4,12 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import NavBar from "./NavBar";
 import styles from "./header.module.css";
+import { useTranslations } from "next-intl";
 
 function Header() {
+
+  const t = useTranslations("");
+
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -18,13 +22,13 @@ function Header() {
   return (
     <header className={styles.header}>
       <NavBar />
-      <ThemeToggle />
+      <ThemeToggle  />
       <div className={styles.right}>
         <Link className={styles.btn} href="/login">
-          Login
+          {t("header.login")}
         </Link>
         <Link className={styles.btn} href="/register">
-          Register
+          {t("header.register")}
         </Link>
       </div>
     </header>

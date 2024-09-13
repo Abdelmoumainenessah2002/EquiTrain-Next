@@ -4,7 +4,7 @@ import HomeImg from '../../../public/home-img.webp'
 import Home from "../home/page";
 
 export default function HomePage() {
-  const t = useTranslations("HomePage");
+  // const t = useTranslations("HomePage");
   return (
     <section className="man-container">
       <div className="flex items-center justify-between flex-col text-center pt-5 h-full">

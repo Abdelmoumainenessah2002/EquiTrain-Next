@@ -16,6 +16,7 @@
     cursor: pointer;
 }
 
+
 .navbar {
     display: flex;
     align-items: center;
@@ -24,11 +25,12 @@
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 1px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1px;
+  flex-direction: row; /* Left to Right by default */
 }
 
 .logoIcon {
@@ -36,6 +38,15 @@
   font-size: 40px;
   margin: 0 -0.70rem 10px -0.50rem;
   transform: scale(1.2);
+}
+
+/* RTL specific styles */
+html[dir="rtl"] .logo {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .logoIcon {
+  margin: 0 -0.50rem 10px -0.50rem; /* Adjust margins for RTL */
 }
 
 .logo:hover {
@@ -49,7 +60,9 @@
     display: none;
 }
 
-
+html[dir="rtl"] .navLinksWrapper {
+    flex-direction: row-reverse;
+}
 
 .navLinks {
     margin-left: 30px;
@@ -60,10 +73,15 @@
 }
 
 .navLink {
+    display: inline-block;
     font-size: 18px;
     font-weight: 600;
     margin: 0 12px;
     transition: all .3s ease;
+}
+
+html[dir="rtl"] .navLink {
+    margin: 0 12px 0 12px;
 }
 
 .right {
@@ -95,7 +113,6 @@
     fill: #6c6e74;
 }
 
-
 .btn:hover {
     background-color: var(--secondary-color);
 }
@@ -103,6 +120,11 @@
 .navLink:hover {
     color: var(--primary-color);
 }
+
+/* global.css or another CSS file */
+
+
+
 
 @media (min-width: 600px) and (max-width: 1024px){
 
@@ -128,13 +150,12 @@
         left: 0;
         top: 100%;
         width: 100%;
-        background-color: inherit;
         transition: all .5s ease-in;
         z-index: 100;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        background-color: #5c5c5c;
     }
 
+    
     .navLinks {
         padding-left: 30px;
         padding-bottom: 10px;
@@ -203,11 +224,9 @@
         left: 0;
         top: 100%;
         width: 100%;
-        background-color: inherit;
         transition: all .5s ease-in;
         z-index: 100;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        background-color: #5c5c5c;
     }
 
     .navLinks {
@@ -221,9 +240,10 @@
     }
 
     .navLink {
-        padding: 0;
-        margin: 6px 0;
-        font-size: 10px;
+        display: block;
+        padding: 5px 0;
+        margin: 10px 0;
+        font-size: 13px;
     }
 
     .right {
@@ -232,7 +252,11 @@
 
     .btn {
         padding: 4px 6px;
-        font-size: 10px;
+        font-size: 14px;;
+    }
+
+    html[dir="rtl"] .btn {
+        margin-left: 10px;
     }
 
     .btn:hover {
@@ -241,7 +265,12 @@
 
     .themeToggle {
         top: 14px;
-        right: 108px;
+        right: 135px;
+        font-size: 26px;
+    }
+
+    html[dir="rtl"] .themeToggle {
+        left: 155px;
     }
 
     /* Style the light mode icon */
@@ -258,3 +287,5 @@
         transition: fill 0.3s ease; /* Smooth transition when changing theme */
     }
 }
+
+

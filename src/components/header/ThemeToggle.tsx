@@ -3,6 +3,7 @@ import { useTheme } from "next-themes";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { useEffect, useState } from "react";
 import styles from "./header.module.css";
+import { useRouter } from "next/navigation";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
@@ -13,6 +14,8 @@ const ThemeToggle = () => {
   }, []);
 
   if (!mounted) return null; // Avoid SSR issues by waiting for the component to mount
+  
+
 
   return (
     <div

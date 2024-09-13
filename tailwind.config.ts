@@ -19,6 +19,9 @@ const config: Config = {
           dark: "#f9fafb", // Dark mode text
         },
       },
+      screens: {
+        "max-lg": { max: "1024px" },
+      },
     },
   },
   plugins: [],
