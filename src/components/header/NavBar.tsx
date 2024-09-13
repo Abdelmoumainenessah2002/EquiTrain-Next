@@ -1,14 +1,16 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./header.module.css";
 import { GiSeahorse } from "react-icons/gi";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
-
+import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes"; // Import the useTheme hook
 
 const NavBar = () => {
-  
+  const t = useTranslations("");
+  const { theme } = useTheme(); // Use theme from next-themes
   const [toogle, setToggle] = useState(false);
 
   return (
@@ -28,78 +30,40 @@ const NavBar = () => {
         </Link>
       </div>
       <div
-        className={styles.navLinksWrapper}
+        className={`${styles.navLinksWrapper} ${
+          theme === "light"
+            ? "max-lg:bg-background-light"
+            : "max-lg:bg-background-dark"
+        }`}
         style={{
-          clipPath: (toogle && "polygon(0 0, 100% 0, 100% 100%, 0 100%)") || "",
+          clipPath: toogle ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)" : "",
         }}
       >
         <ul className={styles.navLinks}>
-          <Link
-            onClick={() => setToggle(false)}
-            className={styles.navLink}
-            href="/"
-          >
-            Posts
-          </Link>
-          <Link
-            onClick={() => setToggle(false)}
-            className={styles.navLink}
-            href="/"
-          >
-            Friends
-          </Link>
-          <Link
-            onClick={() => setToggle(false)}
-            className={styles.navLink}
-            href="/"
-          >
-            Notifications
-          </Link>
-          <Link
-            onClick={() => setToggle(false)}
-            className={styles.navLink}
-            href="/"
-          >
-            Admin Dashbord
-          </Link>
+          <li className={styles.navLink}>
+            <Link onClick={() => setToggle(false)} href="/">
+              {t("header.nav.posts")}
+            </Link>
+          </li>
+          <li className={styles.navLink}>
+            <Link onClick={() => setToggle(false)} href="/">
+              {t("header.nav.friends")}
+            </Link>
+          </li>
+          <li className={styles.navLink}>
+            <Link onClick={() => setToggle(false)} href="/">
+              {t("header.nav.notifications")}
+            </Link>
+          </li>
+          <li className={styles.navLink}>
+            <Link onClick={() => setToggle(false)} href="/">
+              {t("header.nav.admin")}
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
   );
 };
 
-
 export default NavBar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import Link from "next/link";
-
-// const HeaderRight = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
-//   console.log(isMenuOpen);
-
-//   return (
-//     <nav className={""}>
-//       <ul className="">
-//         <li className="">Posts</li>
-//         <li className="">Friends</li>
-//         <li className="">Search</li>
-//         <li className="">Notifications</li>
-//         <button className="">Login</button>
-//         <button className="">Signup</button>
-//       </ul>
-//     </nav>
-//   );
-// };
-
-// export default HeaderRight;
